@@ -5,4 +5,23 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.left-side {
+    height: 100vh;
+    width: 35vw;
+    background-image: url(/andrea-leopardi-nwROzyFBB64-unsplash.jpg);
+    background-size: 100% 100%;
+    /* background-repeat: no-repeat; */
+}
+
+.right-side {
+    height: 100vh;
+    width: 65vw;
 }
