@@ -41,6 +41,8 @@ header {
 .left-side p {
     position: relative;
     top: 75vh;
+    font-weight: 700;
+    color: white;
 }
 
 h1 {
@@ -70,7 +72,7 @@ img {
 .message-block  p{
     margin-left: 5%;
     font-size: 24px;
-    font-weight: 70 0;
+    font-weight: 700;
 }
 
 /* form styles */
@@ -79,7 +81,7 @@ img {
     width: 750px;
     border-radius: 12px;
     /* border: 1px solid  gray; */
-    box-shadow: 0px 0px 4px black;
+    box-shadow: 0px 0px 7px black;
 }
 
 form {
@@ -117,7 +119,6 @@ h2 {
     height: 35px;
     border-radius: 5px;
     border: 1px solid gray;
-    /* box-shadow: 0px 0px 3px black; */
 }
 
 /* submit button and bottom text */
@@ -134,9 +135,39 @@ h2 {
     border-radius: 10px;
     font-size: 16px;
     font-weight: 900;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(59, 163, 227, 1);
     color: white;
     border: none;
-    box-shadow:  0px 0px 5px black;
+    /* box-shadow:  0px 0px 5px black; */
     letter-spacing: 1px;
+}
+
+.submit-block p {
+    font-weight: 600;
+}
+
+/* psuedo styles */
+
+input:focus {
+    outline-color: #3ba3e3;
+}
+
+input:valid {
+    outline-color: #28d160;
+}
+
+input:invalid {
+    outline-color: red;
+}
+
+input:hover {
+    box-shadow: 0px 0px 1px black;
+}
+
+.submit-block button:hover {
+    box-shadow: 0px 0px 3px black;
+}
+
+.submit-block button:active {
+    transform: scale(1.05);
 }
