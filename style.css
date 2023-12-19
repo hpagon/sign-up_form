@@ -109,6 +109,7 @@ h2 {
     margin-top: 3%;
 }
 
+
 .input-set label {
     font-size: 14px;
     margin-bottom: 1%;
@@ -121,11 +122,22 @@ h2 {
     border: 1px solid gray;
 }
 
+.error-message {
+    margin: 0px;   
+    font-size: 12px;
+    color: red;
+    /* visibility: hidden; */
+}
+
+ul.error-message {
+    padding-left: 20px;
+}
+
 /* submit button and bottom text */
 
 .submit-block {
     width: 90%;
-    margin-top: 7%;
+    margin-top: 4%;
     margin-left: 5%;
 }
 
@@ -138,7 +150,6 @@ h2 {
     background-color: rgb(59, 163, 227, 1);
     color: white;
     border: none;
-    /* box-shadow:  0px 0px 5px black; */
     letter-spacing: 1px;
 }
 
@@ -146,7 +157,7 @@ h2 {
     font-weight: 600;
 }
 
-/* psuedo styles */
+/* pseudo class styles */
 
 input:focus {
     outline-color: #3ba3e3;

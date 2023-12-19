@@ -30,33 +30,42 @@
             <div>
                 <label for="first_name">FIRST NAME</label>
                 <input type="text" id="first_name" name="first_name" required>
+                <p class="error-message">Enter a valid name</p>
             </div>
             <div>
                 <label for="last_name">LAST NAME</label>
                 <input type="text" id="last_name" name="last_name" required>
+                <p class="error-message">Enter a valid name</p>
             </div>
         </div>
         <div class="input-set">
             <div>
                 <label for="email">EMAIL</label>
                 <input type="email" id="email" name="email" required>
+                <p class="error-message">Enter a valid email</p>
             </div>
             <div>
                 <label for="phone_number">PHONE NUMBER</label>
-                <input type="tel" id="phone_number" name="phone_number" required>
+                <input type="tel" id="phone_number" name="phone_number" required pattern="\d{3}[\-]?\d{3}[\-]?\d{4}">
+                <p class="error-message">Enter a valid 10 digit number</p>
             </div>
         </div>
         <div class="input-set">
             <div>
                 <label for="password">PASSWORD</label>
-                <input type="text" id="password" name="password" required>
+                <input type="password" id="password" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                <ul class="error-message">
+                    <li>8 character minimum</li>
+                    <li>At least 1 uppercase, 1 lowercase, and 1 digit/special character</li>
+                </ul>
             </div>
             <div>
                 <label for="password_confirm">CONFRIM PASSWORD</label>
-                <input type="text" id="password_confirm" name="password_confirm" required>
+                <input type="password" id="password_confirm" name="password_confirm" required>
+                <p class="error-message">Passwords must match</p>
             </div>
         </div>
-        <div class="submit-block">
+        <div class="submit-block">  
             <button type="submit">Create Account</button>
             <p>Already have an account? <a href="">Log in</a></p>
         </div>
