@@ -140,7 +140,7 @@ ul.error-message {
 .input-set span {
     position: absolute;
     top: 29%;
-    left: 80%;
+    left: 83%;
     color: #8c8c8c;
     /* visibility: hidden; */
 }
@@ -179,8 +179,9 @@ input:valid {
     outline-color: #28d160;
 }
 
-input:invalid {
+.input-set div input:invalid {
     outline-color: red;
+    /* border: 2px solid red; */
 }
 
 input:focus:invalid + .error-message {
@@ -188,7 +189,7 @@ input:focus:invalid + .error-message {
 }
 
 input:hover {
-    box-shadow: 0px 0px 1px black;
+    box-shadow: 0px 0px 1.5px black;
 }
 
 .submit-block button:hover {
