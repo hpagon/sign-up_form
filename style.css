@@ -80,7 +80,6 @@ img {
     margin-top: 4vh;
     width: 750px;
     border-radius: 12px;
-    /* border: 1px solid  gray; */
     box-shadow: 0px 0px 7px black;
 }
 
@@ -119,18 +118,37 @@ h2 {
     width: 300px;
     height: 35px;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid #808080;
 }
 
 .error-message {
     margin: 0px;   
     font-size: 12px;
     color: red;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 ul.error-message {
     padding-left: 20px;
+}
+
+.input-set div {
+    position: relative;
+    width: 306px;
+}
+
+.input-set span {
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 29%;
+    left: 80%;
+    color: #8c8c8c;
+    visibility: hidden;
+}
+
+.input-set .password-container input {
+    width: 230px;
+    padding-right: 72px;
 }
 
 /* submit button and bottom text */
@@ -158,11 +176,6 @@ ul.error-message {
 }
 
 /* pseudo class styles */
-
-input:focus {
-    outline-color: #3ba3e3;
-}
-
 input:valid {
     outline-color: #28d160;
 }
@@ -171,14 +184,27 @@ input:invalid {
     outline-color: red;
 }
 
+input:focus:invalid + .error-message {
+    visibility: visible;
+}
+
 input:hover {
     box-shadow: 0px 0px 1px black;
 }
 
 .submit-block button:hover {
     box-shadow: 0px 0px 3px black;
+    cursor: pointer;
 }
 
 .submit-block button:active {
     transform: scale(1.05);
+}
+
+.input-set div:focus-within span {
+    visibility: visible;
+}
+
+.input-set span:hover {
+    cursor: pointer;
 }
