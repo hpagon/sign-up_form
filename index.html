@@ -53,7 +53,7 @@
         <div class="input-set">
             <div class="password-container">
                 <label for="password">PASSWORD</label>
-                <span>Show</span>
+                <span id="passwordShow">Show</span>
                 <input type="password" id="password" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
                 <ul class="error-message">
                     <li>8 character minimum.</li>
@@ -62,7 +62,7 @@
             </div>
             <div class="password-container">
                 <label for="password_confirm">CONFRIM PASSWORD</label>
-                <span>Show</span>
+                <span id="confirmPasswordShow">Show</span>
                 <input type="password" id="password_confirm" name="password_confirm" required>
             <p class="error-message">Passwords must match.</p>
             </div>

@@ -138,12 +138,11 @@ ul.error-message {
 }
 
 .input-set span {
-    /* border: 1px solid black; */
     position: absolute;
     top: 29%;
     left: 80%;
     color: #8c8c8c;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .input-set .password-container input {
