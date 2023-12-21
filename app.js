@@ -15,7 +15,7 @@ function passwordToggle(e) {
     e.target.textContent = e.target.textContent === 'Show' ? 'Hide':'Show';
 }
 
-// checks the validity of the confirm password field
+// sets the validity of the confirm password field
 function checkPasswordValidity() {
     console.log("here?")
     if(passwordConfirm.value === "") {

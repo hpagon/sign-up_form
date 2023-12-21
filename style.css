@@ -2,26 +2,24 @@
 :root {
 }
 
-* {
-    /* border: 1px solid black; */
-}
-
 body {
     font-family: 'Mulish', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
+    min-height: 100vh;
 }
 
 
 /* styling for left pane */
 .left-side {
-    height: 100vh;
     width: 35vw;
     background-image: url(/andrea-leopardi-nwROzyFBB64-unsplash.jpg);
     background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -39,8 +37,11 @@ header {
 }
 
 .left-side p {
+    text-align: center;
+    box-sizing: border-box;
+    width: 80%;
     position: relative;
-    top: 75vh;
+    top: 70%;
     font-weight: 700;
     color: white;
 }
@@ -57,7 +58,7 @@ img {
 
 /* styles for right pane */
 .right-side {
-    height: 100vh;
+    /* height: 100vh; */
     width: 65vw;
     display: flex;
     flex-direction: column;
@@ -67,12 +68,14 @@ img {
 .message-block {
     width: 750px;
     margin-top: 8vh;
+    box-sizing: border-box;
 }
 
-.message-block  p{
+.message-block p {
     margin-left: 5%;
     font-size: 24px;
     font-weight: 700;
+    box-sizing: border-box;
 }
 
 /* form styles */
@@ -142,12 +145,11 @@ ul.error-message {
     top: 29%;
     left: 83%;
     color: #8c8c8c;
-    /* visibility: hidden; */
 }
 
 .input-set .password-container input {
-    width: 230px;
-    padding-right: 72px;
+    width: 240px;
+    padding-right: 62px;
 }
 
 /* submit button and bottom text */
@@ -180,7 +182,7 @@ input:valid {
 }
 
 .input-set div .error {
-    border: 1px solid red;
+    border: 2px solid red;
     outline: none;
 }
 
@@ -207,4 +209,137 @@ input:hover {
 
 .input-set span:hover {
     cursor: pointer;
+}
+
+/* media */
+
+@media (max-width: 1200px) {
+    .left-side header{
+        font-size: 36px;
+    }
+
+    .left-side {
+        width: 20vw;
+    }
+
+    .left-side header  {
+        flex-direction: column;
+    }
+
+    .left-side p {
+        top: 65vh;
+    }
+
+    /* .left-side  */
+
+    .right-side {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+    }
+
+    /* left pane styles */
+    .left-side {
+        width: 100%;
+        height: max(30vh, 200px);
+        justify-content: space-between;
+    }
+
+    .left-side header {
+        position: static;
+        flex-direction: row;
+        height: max(100px, 50%);
+    }
+
+    .left-side img {
+        scale: 0.7;
+    }
+
+    .left-side h1 {
+        font-size: 50px;
+    }
+
+    .left-side p {
+        position: static;
+    }
+
+    /* right pane styles */
+    .right-side {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .right-side {
+        height: 125vh;
+    }
+
+    .form-container {
+        width: 400px;
+    }
+
+    form {
+        align-items: center;
+        width: 300px;
+    }
+
+    .input-set {
+        flex-direction: column;
+    }
+
+    .right-side .message-block {
+        width: 80%;
+    }
+
+    .right-side .message-block p {
+        width: 80%;
+    }
+
+    /* toggle buttons */
+    .right-side .input-set span {
+        top: 31px;
+    }
+
+    .submit-block {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 440px) {
+    /* left pane styles */
+    .left-side {
+        height: 40vh;
+    }
+    /* right pane styles */
+    .right-side {
+        height: 150vh;
+    }
+    .form-container {
+        width: 280px;
+    }
+
+    form {
+        width: 280px;
+    }
+
+    .input-set div input {
+        width: 230px;
+    }
+
+    .input-set div {
+        width: 240px;
+    }
+
+    .input-set .password-container input {
+        width: 168px;
+        padding-right: 62px;
+    }
+    /* toggle buttons */
+    .input-set .password-container span {
+        left: 75%;
+    }
 }
