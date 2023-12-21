@@ -179,12 +179,12 @@ input:valid {
     outline-color: #28d160;
 }
 
-.input-set div input:invalid {
-    outline-color: red;
-    /* border: 2px solid red; */
+.input-set div .error {
+    border: 1px solid red;
+    outline: none;
 }
 
-input:focus:invalid + .error-message {
+.error + .error-message {
     visibility: visible;
 }
 

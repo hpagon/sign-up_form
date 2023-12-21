@@ -1,3 +1,4 @@
+let inputs = document.querySelectorAll("input");
 // password inputs
 let password = document.querySelector("#password");
 let passwordConfirm = document.querySelector("#password_confirm");
@@ -14,23 +15,38 @@ function passwordToggle(e) {
     e.target.textContent = e.target.textContent === 'Show' ? 'Hide':'Show';
 }
 
+// checks the validity of the confirm password field
 function checkPasswordValidity() {
     console.log("here?")
     if(passwordConfirm.value === "") {
-        passwordConfirm.setCustomValidity("Invalid");
+        passwordConfirm.setCustomValidity("Passwords Must Match.");
         confirmPasswordError.textContent = "Passwords Must Match.";
     } else if(password.value === passwordConfirm.value && password.checkValidity()) {
         console.log("custom validity?")
         passwordConfirm.setCustomValidity("");
     } else if(password.value === passwordConfirm.value) {
-        passwordConfirm.setCustomValidity("Invalid");
+        passwordConfirm.setCustomValidity("Password must follow requirements.");
         confirmPasswordError.textContent = "Password must follow requirements.";
     } else {
-        passwordConfirm.setCustomValidity("Invalid")
+        passwordConfirm.setCustomValidity("Passwords Must Match.")
         confirmPasswordError.textContent = "Passwords Must Match.";
     }    
 }
 
+// checks the validity of general input fields and toggles error class
+function checkInputValidity(e) {
+    let input = e;
+    if(input.checkValidity()) {
+        input.classList.remove("error");
+    } else {
+        input.classList.add("error");
+    }
+    // if the input being checked is the password field, then it concurrently updates confirm password as well
+    if(e === inputs[4]) {
+        checkInputValidity(passwordConfirm);
+    }
+}
+    
 
 // events listeners
 passwordShow.addEventListener('click', (e) => {
@@ -40,5 +56,16 @@ confirmPasswordShow.addEventListener('click', (e) => {
     passwordToggle(e);
 })
 
-// checks validity of confirm password field
 passwordConfirm.addEventListener('keyup', checkPasswordValidity);
+password.addEventListener('keyup', checkPasswordValidity);  
+
+for(let input of inputs) {
+    input.addEventListener('keyup', (e) => {
+        checkInputValidity(e.target);
+    })
+}
+for(let input of inputs) {
+    input.addEventListener('click', (e) => {
+        checkInputValidity(e.target);
+    })
+}
