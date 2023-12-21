@@ -1,6 +1,4 @@
 /* global styles */
-:root {
-}
 
 body {
     font-family: 'Mulish', sans-serif;
@@ -19,7 +17,6 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
